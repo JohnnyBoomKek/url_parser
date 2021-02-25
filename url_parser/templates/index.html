@@ -1,3 +1,4 @@
+{% load render_table from django_tables2 %}
 <!doctype html>
 <html>
     <head>
@@ -7,16 +8,13 @@
     </head>
     <body>
         <h1>Please enter your url</h1>
-        <form action='/search' method="get">
-            <input type="text" name='your_url'>
-            <input type="submit" value="OK">
+        <p> Please, keep in mind the correct format of the url given</p>
+        <p> Example: http://www.google.com </p>
+            <form  method = 'post'>
+                {% csrf_token %}
+                {{ form.as_p }}
+            <input type="submit">
         </form>
-        <form action="get">
-        <h1>Django form: </h1>
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit">
-
-        </form>
+        {{ links }}
     </body>
 </html> 
