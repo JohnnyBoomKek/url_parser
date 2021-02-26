@@ -9,3 +9,6 @@ class LinkTable(tables.Table):
     country = tables.Column()
     idDead = tables.Column()
 
+class UrlTable(tables.Table):
+    url = tables.Column()
+
