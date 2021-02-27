@@ -21,7 +21,10 @@ To give the app a shot on your local machine you are going to have to:
 ```
 *source venvname/bin/activate*
 ```
-
+ - install dependencies 
+```
+pip install -r requirements.txt
+```
  - locate to the url_parser folder 
  ```
   cd url_parser/
