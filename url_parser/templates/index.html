@@ -31,9 +31,12 @@
             <input type="submit" class="btn btn-primary">
         </div>
         </form>
-    {% if table %}
-    {% render_table table %}
-    {% endif %}
+
+            <div class="col-md-8 offset-md-3">
+            {% if table %}
+            {% render_table table %}
+            {% endif %}
+            </div>
     </body>
     <!-- MDB -->
     <script

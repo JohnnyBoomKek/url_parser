@@ -22,7 +22,6 @@ def index(request):
             #data = asyncio.run(main(urls))
             data = [{'url':value} for value in urls]
             table = UrlTable(data=data)
-            print(type(table), table)
             return render(request, 'index.html', {'form':form, 'table':table})
     else:
         form = LinkForm()
@@ -39,13 +38,12 @@ def get_all_links(url):
             validate(link)
             urls.append(link)
         except ValidationError:
-            print(link, 'isnt a valid link')
+            pass
     return urls
 
 
 async def get_url_info(url, session):
     async with session.get(url) as response:
-        print('getting data from', url)
         data = await response.read()
         return json.loads(data.decode('utf-8'))
 
@@ -55,11 +53,12 @@ async def main(links):
 
     async with aiohttp.ClientSession() as session:
         for link in links:
-            print(link)
             task = asyncio.create_task(get_url_info(url+link, session))
             tasks.append(task)
 
         await asyncio.gather(*tasks)
         return [task.result() for task in tasks]
+
+
 
 
