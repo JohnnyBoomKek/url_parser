@@ -10,21 +10,23 @@ To give the app a shot on your local machine you are going to have to:
 -Make sure you have python3 installed
 -clone this repo
 -create a virtual enviroment with:
-
+```
     python -m venv venvname 
     (venv being the name of your env.) 
-
+```
 - on unix based systems you are going to need to activate your venv: 
-  
-  source venvname/bin/activate
-  
- - locate to the url_parser folder 
- 
-  cd url_parser/
-  
-- start the app
 
+```
+*source venvname/bin/activate*
+```
+
+ - locate to the url_parser folder 
+ ```
+  cd url_parser/
+ ``` 
+- start the app
+```
   python manage.py runserver
-  
+ ``` 
   
  
