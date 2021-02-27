@@ -7,11 +7,11 @@ Unfortunately due to the api not giving expected results it's just a url parser.
 
 To give the app a shot on your local machine you are going to have to:
 
--Make sure you have python3 installed
+- Make sure you have python3 installed
 
--clone this repo
+- clone this repo
 
--create a virtual enviroment with:
+- create a virtual enviroment with:
 ```
     python -m venv venvname 
     (venv being the name of your env.) 
